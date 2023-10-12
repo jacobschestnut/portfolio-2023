@@ -1,0 +1,13 @@
+[
+    {
+      "name": "Daisy",
+      "summary": "Daisy is a cocktail recipe app that allows users to easily browse cocktails as well as upload their own. Daisy also features a cocktail randomizer and a cravings quiz to help filter results based on what the user is craving.",
+      "link": "https://github.com/jacobschestnut/daisy-client"
+    },
+    {
+      "name": "Nicetapes",
+      "summary": "Nicetapes was my frontend capstone project at NSS. It serves as a catalog that represents a user's own physical VHS Tape collection. It features full CRUD capabilites as well as profile pages specific to the logged in user.",
+      "link": "https://github.com/jacobschestnut/nicetapes"
+    }
+]
+  
