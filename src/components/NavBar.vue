@@ -16,7 +16,7 @@
 
 <script setup>
 const openPdf = () => {
-  const pdfUrl = "/portfolio-2023/assets/documents/Resume_Jacob_Chestnut.pdf";
+  const pdfUrl = "/Resume_Jacob_Chestnut.pdf";
 
   window.open(pdfUrl, "_blank");
 };
