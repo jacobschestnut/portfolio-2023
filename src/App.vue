@@ -9,6 +9,7 @@
       <About />
       <Projects />
     </div>
+    <MouseTracker />
   </div>
 </template>
 
@@ -16,10 +17,11 @@
 import NavBar from "./components/NavBar.vue";
 import Intro from "./components/Intro.vue";
 import About from "./components/About.vue";
-import Projects from "./components/Projects.vue"
+import Projects from "./components/Projects.vue";
+import MouseTracker from "./components/MouseTracker.vue";
 
 export default {
-  components: { NavBar, Intro, About, Projects },
+  components: { NavBar, Intro, About, Projects, MouseTracker },
 
   data() {
     return {

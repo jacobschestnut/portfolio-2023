@@ -2,9 +2,9 @@
 import { ref, onMounted } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSun, faCloud, faCloudSun, faCloudRain, faSnowflake, faBolt, faSmog } from '@fortawesome/free-solid-svg-icons'
+import { faSun, faCloud, faCloudSun, faCloudRain, faSnowflake, faBolt, faSmog, faCloudShowersHeavy } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faSun, faCloud, faCloudSun, faCloudRain, faSnowflake, faBolt, faSmog)
+library.add(faSun, faCloud, faCloudSun, faCloudRain, faSnowflake, faBolt, faSmog, faCloudShowersHeavy)
 
 const weatherResponse = ref(null)
 const isLoading = ref(true)
@@ -49,13 +49,13 @@ onMounted(getWeather);
 </script>
 
 <template>
-  <div>
+  <div class="weather" @click="getWeather">
     <div v-if="isLoading">
       <h3>...</h3>
     </div>
     <div v-else-if="weatherResponse" class="flex items-center justify-center">
-      <font-awesome-icon :icon="['fas', getConditionDescription(weatherResponse.current_weather.weathercode)] " size="2x" class="icon"/>
-      <h3 class="pl-4">{{ Math.round(weatherResponse.current_weather.temperature) }}&deg;</h3>
+      <font-awesome-icon :icon="['fas', getConditionDescription(weatherResponse.current_weather.weathercode)] " size="2x" class="icon weather"/>
+      <h3 class="pl-4 weather">{{ Math.round(weatherResponse.current_weather.temperature) }}&deg;</h3>
     </div>
   </div>
 </template>
@@ -67,5 +67,11 @@ h3 {
 
 .icon {
   color: #ed6a5e;
+}
+
+.weather:hover .icon,
+.weather:hover h3 {
+  color: #ed6a5e87;
+  cursor: pointer; 
 }
 </style>
