@@ -1,5 +1,6 @@
 <template>
-  <div class="navbar flex items-center justify-end w-screen h-20 px-14">
+  <div class="navbar flex items-center justify-between w-screen h-20 px-14">
+    <Weather />
     <ul class="flex items-center justify-center">
       <li class="mr-6">
         <a href="https://www.linkedin.com/in/jacob-chestnut/">LinkedIn</a>
@@ -15,6 +16,8 @@
 </template>
 
 <script setup>
+  import Weather from './Weather.vue';
+
   const openPdf = () => {
     const pdfUrl = "/assets/documents/Resume_Jacob_Chestnut.pdf";
     window.open(pdfUrl, "_blank");
