@@ -12,12 +12,12 @@
 <script setup>
 import { ref } from 'vue';
 import ProjectCard from './ProjectCard.vue';
-import projects from '../data/projects.json';
+import projectsData from '../data/projects.json';
 import useFadeIn from '../composables/fadein';
 
 const fadeInElements = useFadeIn();
 
-const projects = ref(projects);
+const projects = ref(projectsData);
 </script>
   
 <style scoped>
