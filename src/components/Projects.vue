@@ -1,11 +1,7 @@
 <template>
     <div class="projects mb-64">
         <div class="fade-in project-grid-container flex flex-col justify-center items-center">
-            <!-- <div class="flex justify-items-start w-full mb-5">
-                <h1 class="text-5xl tracking-tight">Some projects.</h1>
-            </div> -->
             <div class="project-grid grid grid-cols-2 gap-20">
-                <!-- <h1 class="text-5xl mb-5">Things I've worked on:</h1> -->
                 <ProjectCard v-for="project in projects" :key="project.name" :name="project.name" :summary="project.summary"
                     :link="project.link" />
             </div>

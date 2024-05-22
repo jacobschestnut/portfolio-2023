@@ -1,23 +1,5 @@
-<script>
-import { ref } from "vue";
-import useFadeIn from "../composables/fadein";
-
-export default {
-  setup() {
-    const { fadeInElements } = useFadeIn();
-
-    return {
-      fadeInElements,
-    };
-  },
-};
-</script>
-
 <template>
   <div class="fade-in w-8/12 mb-64">
-    <!-- <div class="flex justify-items-start w-full mb-5">
-            <h1 class="text-5xl tracking-tight">About me.</h1>
-        </div> -->
     <div
       class="about shadow-xl flex flex-col justify-center items-center py-14 px-24 rounded-xl"
     >
@@ -57,6 +39,21 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+import { ref } from "vue";
+import useFadeIn from "../composables/fadein";
+
+export default {
+  setup() {
+    const { fadeInElements } = useFadeIn();
+
+    return {
+      fadeInElements,
+    };
+  },
+};
+</script>
 
 <style scoped>
 .about {
