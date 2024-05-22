@@ -15,11 +15,10 @@
 </template>
 
 <script setup>
-const openPdf = () => {
-  const pdfUrl = "/assets/documents/Resume_Jacob_Chestnut.pdf";
-
-  window.open(pdfUrl, "_blank");
-};
+  const openPdf = () => {
+    const pdfUrl = "/assets/documents/Resume_Jacob_Chestnut.pdf";
+    window.open(pdfUrl, "_blank");
+  };
 </script>
 
 <style scoped>

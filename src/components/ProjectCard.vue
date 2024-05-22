@@ -11,15 +11,14 @@
   </a>
 </template>
 
-<script setup lang="ts">
+<script>
 import { defineProps, ref } from 'vue';
 
-const props = defineProps<Props>();
-interface Props {
-  name: string;
-  summary: string;
-  link: string;
-}
+const props = defineProps([
+  'name', 
+  'summary', 
+  'link'
+]);
 
 let isHovered = ref(false);
 
@@ -37,7 +36,6 @@ const handleMouseOut = () => {
 </script>
 
 <style scoped>
-
 .project-card-link {
   text-decoration: none;
   color: inherit;
@@ -58,5 +56,4 @@ h1 {
   font-size: 3rem;
   color: #ed6a5e;
 }
-
 </style>

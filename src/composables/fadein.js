@@ -4,23 +4,23 @@ export default function useFadeIn() {
   const fadeInElements = ref([]);
 
   const handleScroll = () => {
-    const delay = 200; // Set a fixed delay of 200ms
+    const delay = 200;
 
     for (let i = 0; i < fadeInElements.value.length; i++) {
       const elem = fadeInElements.value[i];
       if (isElemVisible(elem) && !elem.hasAttribute('data-faded-in')) {
         setTimeout(() => {
           elem.style.opacity = '1';
-          elem.style.transform = 'translateY(0)'; // Slide in from bottom
+          elem.style.transform = 'translateY(0)';
           elem.setAttribute('data-faded-in', 'true');
-        }, delay * i); // Use the fixed delay times the index for sequential effect
+        }, delay * i);
       }
     }
   };
 
   const isElemVisible = (el) => {
     const rect = el.getBoundingClientRect();
-    const elemTop = rect.top + rect.height - 500; // Adjust the calculation
+    const elemTop = rect.top + rect.height - 500;
     const elemBottom = rect.bottom;
     return elemTop < window.innerHeight && elemBottom >= 0;
   };
