@@ -8,7 +8,7 @@
           <p class="max-w-xl mb-5">
             I've been dabbling in Web Development, building gaming PCs and
             modifying/creating video games since 2011. It wasn't until I
-            graduated with a completely seperate degree in
+            graduated with a completely separate degree in
             <a
               class="special-word"
               href="https://www.mtsu.edu/programs/audio-production/"
@@ -40,19 +40,11 @@
   </div>
 </template>
 
-<script>
-import { ref } from "vue";
+<script setup>
+import { ref } from 'vue';
 import useFadeIn from "../composables/fadein";
 
-export default {
-  setup() {
-    const { fadeInElements } = useFadeIn();
-
-    return {
-      fadeInElements,
-    };
-  },
-};
+const { fadeInElements } = useFadeIn();
 </script>
 
 <style scoped>

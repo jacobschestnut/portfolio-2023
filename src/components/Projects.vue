@@ -9,35 +9,19 @@
     </div>
 </template>
   
-<script>
+<script setup>
+import { ref } from 'vue';
 import ProjectCard from './ProjectCard.vue';
 import projects from '../data/projects.json';
 import useFadeIn from '../composables/fadein';
 
-export default {
-    components: {
-        ProjectCard
-    },
-    data() {
-        return {
-            projects: projects
-        };
-    },
-    setup() {
-        const { fadeInElements } = useFadeIn();
+const fadeInElements = useFadeIn();
 
-        return {
-            fadeInElements
-        };
-    }
-}
+const projects = ref(projects);
 </script>
   
 <style scoped>
-
 h1 {
     color: #ffaf87;
 }
-
 </style>
-  

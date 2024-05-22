@@ -11,7 +11,7 @@
   </a>
 </template>
 
-<script>
+<script setup>
 import { defineProps, ref } from 'vue';
 
 const props = defineProps([
@@ -20,7 +20,7 @@ const props = defineProps([
   'link'
 ]);
 
-let isHovered = ref(false);
+const isHovered = ref(false);
 
 const handleMouseOver = () => {
   setTimeout(() => {

@@ -12,19 +12,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 import useFadeIn from '../composables/fadein';
 
-export default {
-  setup() {
-    const { fadeInElements } = useFadeIn();
-
-    return {
-      fadeInElements
-    };
-  },
-};
+const { fadeInElements } = useFadeIn();
 </script>
 
 <style scoped>
