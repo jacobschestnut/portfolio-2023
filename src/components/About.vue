@@ -1,5 +1,6 @@
 <template>
-  <div class="fade-in w-8/12 mb-64">
+  <div class="fade-in w-8/12 mb-64 flex flex-col items-center">
+    <div class="divider" id="divider1"></div>
     <div
       class="about shadow-xl flex flex-col justify-center items-center py-14 px-24 rounded-xl"
     >
@@ -37,6 +38,7 @@
         </div>
       </div>
     </div>
+    <div class="divider" id="divider2"></div>
   </div>
 </template>
 
@@ -64,4 +66,21 @@ a:hover {
 h1 {
   color: #ffaf87;
 }
+
+.divider {
+  height: 0.1rem;
+  background-color: #ffaf87;
+  border-radius: 50px;
+}
+
+#divider1 {
+  width: 125%;
+  margin: 0 0 6rem 0;
+}
+
+#divider2 {
+  width: 75%;
+  margin: 6rem 0 0 0;
+}
+
 </style>
