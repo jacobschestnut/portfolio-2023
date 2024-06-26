@@ -11,6 +11,8 @@ const isLoading = ref(true)
 const lat = ref(null)
 const lon = ref(null)
 
+const windowWidth = ref(window.innerWidth);
+
 const selectLocation = (lat, lon) => {
   fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&temperature_unit=fahrenheit`)
     .then(response => response.json())
@@ -51,20 +53,16 @@ onMounted(getWeather);
 <template>
   <div class="weather" @click="getWeather">
     <div v-if="isLoading">
-      <h3>...</h3>
+      <h3 class="sm:text-s lg:text-3xl">...</h3>
     </div>
-    <div v-else-if="weatherResponse" class="flex items-center justify-center">
+    <div v-else-if="weatherResponse" class="flex items-center justify-center ">
       <font-awesome-icon :icon="['fas', getConditionDescription(weatherResponse.current_weather.weathercode)] " size="2x" class="icon weather"/>
-      <h3 class="pl-4 weather">{{ Math.round(weatherResponse.current_weather.temperature) }}&deg;</h3>
+      <h3 v-if="windowWidth >= 1024" class="text-xs sm:text-s lg:text-2xl sm:pl-4 weather">{{ Math.round(weatherResponse.current_weather.temperature) }}&deg;</h3>
     </div>
   </div>
 </template>
 
 <style scoped>
-h3 {
-  font-size: 1.75rem;
-}
-
 .icon {
   color: #ed6a5e;
 }

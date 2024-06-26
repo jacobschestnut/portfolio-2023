@@ -4,12 +4,12 @@
       class="navbar" 
       :class="{ 'shadow-lg': hasBoxShadow, 'navbar--hidden': !showNavbar }"
     />
-    <div class="content flex flex-col items-center px-40">
+    <div class="content flex flex-col items-center px-40 w-screen">
       <Intro />
       <About />
       <Projects />
     </div>
-    <MouseTracker />
+    <!-- <MouseTracker /> -->
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <a :href="props.link" class="project-card-link">
-    <div @mouseover="handleMouseOver" @mouseout="handleMouseOut" class="project-card w-80 rounded-xl z-0 shadow-xl">
+    <div @mouseover="handleMouseOver" @mouseout="handleMouseOut" class="project-card w-80 h-20 rounded-xl z-0 shadow-xl">
       <div class="flex flex-col justify-center items-center h-full p-12" v-if="!isHovered">
         <h1 class="text-center">{{ props.name }}</h1>
       </div>
@@ -42,7 +42,7 @@ const handleMouseOut = () => {
 }
 
 .project-card {
-  height: 30rem;
+  height: 20rem;
   background-color: #ff8e72;
   transition: background-color 0.1s;
   cursor: pointer;
@@ -53,7 +53,19 @@ const handleMouseOut = () => {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: #ed6a5e;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-card {
+    height: 30rem;
+  }
 }
 </style>
